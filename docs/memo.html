@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>メモ帳</title>
+  <link rel="stylesheet" href="memo.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>メモ帳</h1>
+      <a href="index.html" class="back-link">戻る</a>
+    </header>
+
+    <div class="note-container">
+      <textarea id="note" placeholder="ここにメモを入力してください..."></textarea>
+      <div class="actions">
+        <button id="save-btn">保存</button>
+        <input type="file" id="file-upload" />
+        <button id="load-btn">ファイルを読み込む</button>
+      </div>
+      <div class="search-container">
+        <input type="text" id="search" placeholder="メモを検索..." />
+        <button id="search-btn">検索</button>
+      </div>
+      <div class="date-search">
+        <label for="start-date">開始日: </label>
+        <input type="date" id="start-date" />
+        <label for="end-date">終了日: </label>
+        <input type="date" id="end-date" />
+        <button id="date-search-btn">日付で検索</button>
+      </div>
+    </div>
+
+    <div class="saved-notes" id="saved-notes">
+      <h2>保存されたメモ</h2>
+      <ul id="notes-list"></ul>
+    </div>
+  </div>
+
+  <script src="memo.js"></script>
+</body>
+</html>
